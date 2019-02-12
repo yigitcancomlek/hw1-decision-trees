@@ -25,7 +25,7 @@ def load_data(data_path):
     chocolate,fruity,caramel,peanutyalmondy,nougat,crispedricewafer,hard,bar,pluribus
 
     The second array contains the targets for each row. The targets are in the last 
-    column of the csv file (labeled class). The first row of the csv file contains 
+    column of the csv file (labeled 'class'). The first row of the csv file contains 
     the labels for each column and shouldn't be read into an array.
 
     Example:
@@ -39,27 +39,30 @@ def load_data(data_path):
     This should be done for each row in the csv file, making arrays of size NxK and Nx1.
 
     Args:
-        data_path: path to candy-data.csv
+        data_path (str): path to csv file containing the data
 
     Output:
-        features: numpy array of size NxK containing the K features
-        targets: numpy array of size Nx1 containing the 1 feature.
+        features (np.array): numpy array of size NxK containing the K features
+        targets (np.array): numpy array of size Nx1 containing the 1 feature.
     """
 
     # Implement this function and remove the line that raises the error after.
     raise NotImplementedError()
 
-def train_test_split(features, targets, N):
+def train_test_split(features, targets, fraction):
     """
     Split features and targets into training and testing, randomly. N points from the data 
-    sampled for training and (features.shape[0] - N) points for testing. Return 
-    train_features (size NxK), train_targets (Nx1), test_features (size MxK where M is the 
-    remaining points in data), and test_targets (Mx1).
+    sampled for training and (features.shape[0] - N) points for testing. Where N:
+
+        N = int(features.shape[0] * fraction)
+    
+    Returns train_features (size NxK), train_targets (Nx1), test_features (size MxK 
+    where M is the remaining points in data), and test_targets (Mx1).
 
     Args:
         features (np.array): numpy array containing features for each example
         targets (np.array): numpy array containing labels corresponding to each example.
-        N (int): number of examples to be drawn for training
+        fraction (float between 0.0 and 1.0): fraction of examples to be drawn for training
 
     Returns
         train_features: subset of features containing N examples to be used for training.
