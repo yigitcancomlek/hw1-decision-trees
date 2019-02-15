@@ -14,10 +14,14 @@ You will implement evaluation measures in `code/metrics.py`:
 3. F1-Measure (`code/metrics.py -> f1_measure`)
 
 The entire workflow will be encapsulated in `code/experiment.py -> run`. The run function 
-will allow you to run each approach on different datasets easily.
+will allow you to run each approach on different datasets easily. You will have to 
+implement this `run` function.
 
 Your goal is to pass the test suite (contained in `tests/`). Once the tests are passed, you 
 may move on to the next part - reporting your results.
+
+# Free-response questions
+Answer the following questions
 
 # Report 
 Your task is to run the machine learning algorithms you have implemented on various
