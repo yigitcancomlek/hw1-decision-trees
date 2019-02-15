@@ -18,13 +18,7 @@ o clone this repository run the following command:
 
 ## Files you edit
 
-The following files are to be edited in this assignment:
-
-```
-code/data.py
-code/decision_tree.py
-code/metrics.py
-```
+See problems.md for what files you will edit.
 
 Do not edit anything in the `tests` directory. Files can be added to `tests` but files that exist already cannot be edited. Modifications to tests will be checked for. Do not edit `.travis.yml`. This is used by Travis to test your code! 
 
