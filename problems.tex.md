@@ -1,19 +1,22 @@
 # Coding 
 Your task is to implement two machine learning algorithms:
 
-1. Decision tree (in code/decision_tree.py)
-2. Prior probability (in code/prior_probability.py)
+1. Decision tree (in `code/decision_tree.py`)
+2. Prior probability (in `code/prior_probability.py`)
 
 You will also write code that reads in data into numpy arrays and code that manipulates
-data for training and testing in code/data.py.
+data for training and testing in `code/data.py`.
 
-You will implement evaluation measures in code/metrics.py:
+You will implement evaluation measures in `code/metrics.py`:
 
-1. Confusion matrix (code/metrics.py -> confusion_matrix)
-2. Precision and recall (code/metrics.py -> precision and recall)
-3. F1-Measure (code/metrics.py -> f1_measure)
+1. Confusion matrix (`code/metrics.py -> confusion_matrix`)
+2. Precision and recall (`code/metrics.py -> precision_and_recall`)
+3. F1-Measure (`code/metrics.py -> f1_measure`)
 
-Your goal is to pass the test suite (contained in tests/). Once the test is passed, you 
+The entire workflow will be encapsulated in `code/experiment.py -> run`. The run function 
+will allow you to run each approach on different datasets easily.
+
+Your goal is to pass the test suite (contained in `tests/`). Once the tests are passed, you 
 may move on to the next part - reporting your results.
 
 # Report 
@@ -47,3 +50,5 @@ Here is a suggested outline:
 3. Explain your experiment clearly.
 4. Report your results.
 5. Discuss your results.
+
+Submit your report via Canvas as a PDF document.
