@@ -1,4 +1,22 @@
-# Write-up 
+# Coding 
+Your task is to implement two machine learning algorithms:
+
+1. Decision tree (in code/decision_tree.py)
+2. Prior probability (in code/prior_probability.py)
+
+You will also write code that reads in data into numpy arrays and code that manipulates
+data for training and testing in code/data.py.
+
+You will implement evaluation measures in code/metrics.py:
+
+1. Confusion matrix (code/metrics.py -> confusion_matrix)
+2. Precision and recall (code/metrics.py -> precision and recall)
+3. F1-Measure (code/metrics.py -> f1_measure)
+
+Your goal is to pass the test suite (contained in tests/). Once the test is passed, you 
+may move on to the next part - reporting your results.
+
+# Report 
 Your task is to run the machine learning algorithms you have implemented on various
 datasets and synthesize the results into a coherent report. Someone reading your 
 report should be able to:
@@ -22,13 +40,10 @@ of machine learning. When writing machine learning papers, you'll have to do som
 like this. When making models in industry, you will have to communicate to your
 manager that your new model actually works before it gets deployed. This is done 
 through a clear, rigorous experimental report that is easily understood by others.
+Here is a suggested outline:
 
-## Datasets used
-
-## Description of approaches
-
-## Experimental design
-
-## Results
-
-## Discussion
+1. Describe datasets used.
+2. Describe the approaches used.
+3. Explain your experiment clearly.
+4. Report your results.
+5. Discuss your results.
