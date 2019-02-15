@@ -1,16 +1,16 @@
 # HW1: Decision trees for EECS 349 @ NU
 
-In this assignment, the goals are:
-- Understand the exponential growth of a hypothesis space
+In this assignment, you will:
 - Understand and implement evaluation measures for machine learning algorithms
-- Write code that helps you to visualize and understand a dataset
 - Implement information gain and entropy measures
 - Implement a decision tree with the ID3 algorithm
-- Understand the extension of decision trees to random forest
+- Implement a prior probability classifier
+- Compare and contrast machine learning approaches on different datasets
+- Write up your results in a clear concise report
 
 ## Clone this repository
 
-o clone this repository run the following command:
+To clone this repository run the following command:
 
 ``git clone https://github.com/nucs349/hw1-decision-trees-[your_username]``
 
@@ -20,7 +20,7 @@ o clone this repository run the following command:
 
 See problems.md for what files you will edit.
 
-Do not edit anything in the `tests` directory. Files can be added to `tests` but files that exist already cannot be edited. Modifications to tests will be checked for. Do not edit `.travis.yml`. This is used by Travis to test your code! 
+Do not edit anything in the `tests` directory. Files can be added to `tests` but files that exist already cannot be edited. Modifications to tests will be checked for.
 
 ## Environment setup
 
