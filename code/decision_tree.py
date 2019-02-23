@@ -26,6 +26,8 @@ class Tree():
 class DecisionTree():
     def __init__(self, attribute_names):
         """
+        TODO: Implement this class.
+
         This class implements a binary decision tree learner for examples with
         categorical attributes. Use the ID3 algorithm for implementing the Decision
         Tree: https://en.wikipedia.org/wiki/ID3_algorithm
@@ -108,6 +110,8 @@ class DecisionTree():
 
 def information_gain(features, attribute_index, targets):
     """
+    TODO: Implement me!
+
     Information gain is how a decision tree makes decisions on how to create 
     split points in the tree. Information gain is measured in terms of entropy.
     The goal of a decision tree is to decrease entropy at each split point as much as 

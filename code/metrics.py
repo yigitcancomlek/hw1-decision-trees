@@ -1,6 +1,6 @@
 import numpy as np
 
-def confusion_matrix(predictions, actual):
+def confusion_matrix(actual, predictions):
     """
     Given predictions (an N-length numpy vector) and actual labels (an N-length 
     numpy vector), compute the confusion matrix. The confusion 
@@ -17,8 +17,8 @@ def confusion_matrix(predictions, actual):
     Compute and return the confusion matrix.
 
     Args:
-        predictions (np.array): predicted labels of length N
         actual (np.array): predicted labels of length N
+        predictions (np.array): predicted labels of length N
 
     Output:
         confusion_matrix: confusion matrix between predicted and actual labels
@@ -30,7 +30,7 @@ def confusion_matrix(predictions, actual):
     
     raise NotImplementedError()
 
-def precision_and_recall(predictions, actual):
+def precision_and_recall(actual, predictions):
     """
     Given predictions (an N-length numpy vector) and actual labels (an N-length 
     numpy vector), compute the precision and recall:
@@ -40,8 +40,8 @@ def precision_and_recall(predictions, actual):
     Hint: implement and use the confusion_matrix function!
 
     Args:
-        predictions (np.array): predicted labels of length N
         actual (np.array): predicted labels of length N
+        predictions (np.array): predicted labels of length N
 
     Output:
         precision (float): precision
@@ -52,7 +52,7 @@ def precision_and_recall(predictions, actual):
 
     raise NotImplementedError()
 
-def f1_measure(predictions, actual):
+def f1_measure(actual, predictions):
     """
     Given predictions (an N-length numpy vector) and actual labels (an N-length 
     numpy vector), compute the F1-measure:
@@ -62,8 +62,8 @@ def f1_measure(predictions, actual):
     Hint: implement and use the precision_and_recall function!
 
     Args:
-        predictions (np.array): predicted labels of length N
         actual (np.array): predicted labels of length N
+        predictions (np.array): predicted labels of length N
 
     Output:
         f1_measure (float): F1 measure of dataset (harmonic mean of precision and 

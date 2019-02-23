@@ -72,7 +72,7 @@ def train_test_split(features, targets, fraction):
         test_features: subset of features containing N examples to be used for testing.
         test_targets: subset of targets corresponding to test_features containing targets.
     """
-    if (N > features.shape[0]):
+    if (fraction > 1.0):
         raise ValueError('N cannot be bigger than number of examples!')
 
     raise NotImplementedError()

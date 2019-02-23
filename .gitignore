@@ -105,3 +105,6 @@ venv.bak/
 
 # solution
 solution/
+
+# files generated during test
+tests/test.csv
