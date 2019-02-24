@@ -1,7 +1,7 @@
-from decision_tree import DecisionTree
-from prior_probability import PriorProbability
-from metrics import precision_and_recall, confusion_matrix, f1_measure
-from data import load_data, train_test_split
+from .decision_tree import DecisionTree
+from .prior_probability import PriorProbability
+from .metrics import precision_and_recall, confusion_matrix, f1_measure
+from .data import load_data, train_test_split
 
 def run(data_path, learner_type, fraction):
     """

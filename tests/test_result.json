@@ -1,0 +1,8 @@
+{
+    "test_sklearn_import": true,
+    "test_load_data": false,
+    "test_train_test_split": false,
+    "test_f1_measure": false,
+    "test_precision_and_recall": false,
+    "test_confusion_matrix": false
+}

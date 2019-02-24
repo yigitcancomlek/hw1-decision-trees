@@ -1,0 +1,8 @@
+{
+    "test_load_data": 1,
+    "test_train_test_split": 1,
+    "test_f1_measure": 1,
+    "test_precision_and_recall": 1,
+    "test_confusion_matrix": 1,
+    "test_sklearn_import": "required"
+}

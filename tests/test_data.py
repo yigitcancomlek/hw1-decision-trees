@@ -1,9 +1,9 @@
 import numpy as np
-from sklearn.datasets import make_classification
 import random, string
 import csv
 
 def write_random_csv_file(n_features, n_samples):
+    from sklearn.datasets import make_classification
     features, targets = make_classification(
         n_samples=n_samples, 
         n_features=n_features, 
@@ -38,8 +38,7 @@ def test_load_data():
     features, targets, attribute_names = write_random_csv_file(n_features, n_samples)
 
     _features, _targets, _attribute_names = load_data('tests/test.csv')
-    assert type(_features) == np.ndarray and type(_targets) == np.ndarray
-    assert len(attribute_names) == len(_attribute_names)
+    assert attribute_names == _attribute_names
     assert features == _features and targets == _targets
 
 def test_train_test_split():
