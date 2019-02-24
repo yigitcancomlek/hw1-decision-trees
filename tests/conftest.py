@@ -38,18 +38,23 @@ def grade_assignment(request):
     rubric = load_json('tests/rubric.json')
     report = {
         'score': 0,
+        'notes': {}
     }
+    total = 0.0
 
     for name, result in test_result.items():
         if rubric[name] == 'required':
             if not result:
                 report['score'] = 0
-                report[f'notes.{name}'] = (
+                report['notes'][name] = (
                     f'Failed required test case {name} resulting in a 0.'
                 )
                 break
         else:
-            if not result:
+            if result:
                 report['score'] += rubric[name]
+            total += rubric[name]
+
+    report['score'] = float(report['score'] / total) * 100
 
     save_json(report, 'tests/report.json')
