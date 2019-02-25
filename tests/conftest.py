@@ -6,6 +6,10 @@ import numpy as np
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
+    """
+    This hook puts the result of the test into the object that is the argument to
+    log_test_result. Some pytest magic.
+    """
     # execute all other hooks to obtain the report object
     outcome = yield
     rep = outcome.get_result()
