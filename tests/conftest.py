@@ -89,21 +89,21 @@ def grade_assignment(request):
 
     It also prints to the console, which looks like this:
 
-    Output of autograder
-    ======================
-    # of tests:     0/9 tests passed
-    Overall score:  0/100
-    ======================
-    FAIL test_load_data
-    FAIL test_train_test_split
-    FAIL test_f1_measure
-    FAIL test_precision_and_recall
-    FAIL test_confusion_matrix
-    FAIL test_experiment_run_decision_tree
-    FAIL test_experiment_run_prior_probability
-    FAIL test_accuracy
-    FAIL test_experiment_run_and_compare
-    ======================
+        Output of autograder
+        ======================
+        # of tests:     0/9 tests passed
+        Overall score:  0/100
+        ======================
+        FAIL test_load_data
+        FAIL test_train_test_split
+        FAIL test_f1_measure
+        FAIL test_precision_and_recall
+        FAIL test_confusion_matrix
+        FAIL test_experiment_run_decision_tree
+        FAIL test_experiment_run_prior_probability
+        FAIL test_accuracy
+        FAIL test_experiment_run_and_compare
+        ======================
 
     Run this autograder by running the following in the project's root directory.
         python -m pytest
