@@ -30,6 +30,25 @@ def confusion_matrix(actual, predictions):
     
     raise NotImplementedError()
 
+def accuracy(actual, predictions):
+    """
+    Given predictions (an N-length numpy vector) and actual labels (an N-length 
+    numpy vector), compute the accuracy:
+
+    Hint: implement and use the confusion_matrix function!
+
+    Args:
+        actual (np.array): predicted labels of length N
+        predictions (np.array): predicted labels of length N
+
+    Output:
+        accuracy (float): accuracy
+    """
+    if predictions.shape[0] != actual.shape[0]:
+        raise ValueError("predictions and actual must be the same length!")
+
+    raise NotImplementedError()
+
 def precision_and_recall(actual, predictions):
     """
     Given predictions (an N-length numpy vector) and actual labels (an N-length 

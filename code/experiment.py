@@ -30,9 +30,13 @@ def run(data_path, learner_type, fraction):
 
     Returns:
         confusion_matrix (np.array): Confusion matrix of learner on testing examples
+        accuracy (np.float): Accuracy on testing examples using learner
         precision (np.float): Precision on testing examples using learner
         recall (np.float): Recall on testing examples using learner
         f1_measure (np.float): F1 Measure on testing examples using learner
     """
 
     raise NotImplementedError()
+
+    # Order of these returns must be maintained
+    return confusion_matrix, accuracy, precision, recall, f1_measure

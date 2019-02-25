@@ -1,9 +1,14 @@
 import numpy as np
+from .test_utils import make_fake_data
 
-def make_fake_data():
-    y_true = np.random.random(100) > .5
-    y_pred = np.random.random(100) > .5
-    return y_true, y_pred
+def test_accuracy():
+    from sklearn.metrics import accuracy_score
+    from code import accuracy
+
+    y_true, y_pred = make_fake_data()
+    _actual = accuracy_score(y_true, y_pred)
+    _est = accuracy(y_true, y_pred)
+    assert _actual == _est
 
 def test_f1_measure():
     from sklearn.metrics import f1_score
