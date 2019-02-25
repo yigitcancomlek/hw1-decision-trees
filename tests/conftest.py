@@ -91,7 +91,8 @@ def grade_assignment(request):
         }
     }
 
-    It also prints to the console, which looks like this:
+    It also prints to the console (this may not be seen if all tests passed), 
+    which looks like this:
 
         Output of autograder
         ======================
