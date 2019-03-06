@@ -1,4 +1,4 @@
-# Coding 
+# Coding (5 points)
 Your task is to implement two machine learning algorithms:
 
 1. Decision tree (in `code/decision_tree.py`)
@@ -20,7 +20,10 @@ implement this `run` function.
 Your goal is to pass the test suite (contained in `tests/`). Once the tests are passed, you 
 may move on to the next part - reporting your results.
 
-# Free-response questions
+Your grade for this section is defined by the autograder. If it says you got an 80/100,
+you get 4 points here.
+
+# Free-response questions (5 points)
 Answer the following questions
 
 # Report 
