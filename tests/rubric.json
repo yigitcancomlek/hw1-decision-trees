@@ -3,6 +3,10 @@
         "weight": "required",
         "depends": []
     },
+    "test_netid": {
+        "weight": "required",
+        "depends": []
+    },
     "test_load_data": {
         "weight": 1,
         "depends": []
