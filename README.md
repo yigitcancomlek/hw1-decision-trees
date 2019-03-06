@@ -1,4 +1,4 @@
-# HW1: Decision trees for EECS 349 @ NU
+# HW1: Decision trees - EECS 349 @ NU
 
 In this assignment, you will:
 - Understand and implement evaluation measures for machine learning algorithms
