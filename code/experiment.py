@@ -1,12 +1,12 @@
 from .decision_tree import DecisionTree
 from .prior_probability import PriorProbability
-from .metrics import precision_and_recall, confusion_matrix, f1_measure
+from .metrics import precision_and_recall, confusion_matrix, f1_measure, accuracy
 from .data import load_data, train_test_split
 
 def run(data_path, learner_type, fraction):
     """
     This function walks through an entire machine learning workflow as follows:
-    
+
         1. takes in a path to a dataset
         2. loads it into a numpy array with `load_data`
         3. instantiates the class used for learning from the data using learner_type (e.g
@@ -16,11 +16,11 @@ def run(data_path, learner_type, fraction):
         6. tests the trained learner using the testing split with `predict`
         7. evaluates the trained learner with precision_and_recall, confusion_matrix, and
            f1_measure
-    
+
     Each run of this function constitutes a trial. Your learner should be pretty
-    robust across multiple runs, as long as `fraction` is sufficiently high. See how 
+    robust across multiple runs, as long as `fraction` is sufficiently high. See how
     unstable your learner gets when less and less data is used for training by
-    playing around with `fraction`. 
+    playing around with `fraction`.
 
     Args:
         data_path (str): path to csv file containing the data
