@@ -7,8 +7,8 @@ def confusion_matrix(actual, predictions):
     matrix for a binary classifier would be a 2x2 matrix as follows:
 
     [
-        [true_positives, false_positives],
-        [false_negatives, true_negatives]
+        [true_negatives, false_positives],
+        [false_negatives, true_positives]
     ]
 
     YOU DO NOT NEED TO IMPLEMENT CONFUSION MATRICES THAT ARE FOR MORE THAN TWO 
