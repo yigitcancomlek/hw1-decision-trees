@@ -24,7 +24,7 @@ def test_train_test_split():
 
     output = train_test_split(features, targets, fraction)
     expected_train_size = int(n_samples * fraction)
-    expected_test_size = int(n_samples * (1 - fraction))
+    expected_test_size = n_samples - expected_train_size
 
     for o in output:
         assert o.shape[0] == expected_train_size or o.shape[0] == expected_test_size
