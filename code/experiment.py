@@ -8,9 +8,9 @@ def run(data_path, learner_type, fraction):
     This function walks through an entire machine learning workflow as follows:
     
         1. takes in a path to a dataset
-        2. instantiates the class used for learning from the data using learner_type (e.g
+        2. loads it into a numpy array with `load_data`
+        3. instantiates the class used for learning from the data using learner_type (e.g
            learner_type is 'decision_tree', 'prior_probability')
-        3. loads it into a numpy array with `load_data`
         4. splits the data into training and testing with `train_test_split` and `fraction`.
         5. trains a learner using the training split with `fit`
         6. tests the trained learner using the testing split with `predict`

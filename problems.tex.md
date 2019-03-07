@@ -21,7 +21,17 @@ Your goal is to pass the test suite (contained in `tests/`). Once the tests are 
 may move on to the next part - reporting your results.
 
 Your grade for this section is defined by the autograder. If it says you got an 80/100,
-you get 4 points here.
+you get 4 points here. Suggested order for passing test_cases:
+
+1. test_load_data
+2. test_train_test_split
+3. test_confusion_matrix
+4. test_accuracy
+5. test_precision_and_recall
+6. test_f1_measure
+7. test_experiment_run_prior_probability
+8. test_experiment_run_decision_tree
+9. test_experiment_run_and_compare
 
 # Free-response questions (5 points)
 Answer the following questions
