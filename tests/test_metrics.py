@@ -36,3 +36,11 @@ def test_confusion_matrix():
     _actual = ref_confusion_matrix(y_true, y_pred)
     _est = est_confusion_matrix(y_true, y_pred)
     assert np.allclose(_actual, _est)
+
+    # testing for non-boolean entries
+    y_true, y_pred = make_fake_data()
+    y_true = y_true.astype(int) + 1
+    y_pred = y_pred.astype(int) + 1
+    _actual = ref_confusion_matrix(y_true, y_pred)
+    _est = est_confusion_matrix(y_true, y_pred)
+    assert np.allclose(_actual, _est)
