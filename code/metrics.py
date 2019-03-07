@@ -8,7 +8,7 @@ def confusion_matrix(actual, predictions):
 
     [
         [true_positives, false_positives],
-        [false_negatives, true_positives]
+        [false_negatives, true_negatives]
     ]
 
     YOU DO NOT NEED TO IMPLEMENT CONFUSION MATRICES THAT ARE FOR MORE THAN TWO 
@@ -21,7 +21,7 @@ def confusion_matrix(actual, predictions):
         predictions (np.array): predicted labels of length N
 
     Output:
-        confusion_matrix: confusion matrix between predicted and actual labels
+        confusion_matrix (np.array): 2x2 confusion matrix between predicted and actual labels
 
     """
 
