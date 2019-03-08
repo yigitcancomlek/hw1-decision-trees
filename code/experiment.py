@@ -22,6 +22,12 @@ def run(data_path, learner_type, fraction):
     unstable your learner gets when less and less data is used for training by
     playing around with `fraction`.
 
+    IMPORTANT:
+    If fraction == 1.0, then your training and testing sets should be exactly the
+    same. This is so that the test cases are deterministic. The test case checks if you
+    are fitting the training data correctly, rather than checking for generalization to
+    a testing set.
+
     Args:
         data_path (str): path to csv file containing the data
         learner_type (str): either 'decision_tree' or 'prior_probability'. For each of these,
