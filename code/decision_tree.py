@@ -1,11 +1,13 @@
 import numpy as np
 
 class Tree():
-    def __init__(self, attribute_name, attribute_index, value, branches=[]):
+    def __init__(self, value=None, attribute_name="root", attribute_index=None, branches=[]):
         """
         This class implements a tree structure with multiple branches at each node. 
         If self.branches is an empty list, this is a leaf node and what is contained in
         self.value is the predicted class.
+
+        The defaults for this are for a root node in the tree.
 
         Arguments:
             branches (list): List of Tree classes. Used to traverse the tree. In a 
