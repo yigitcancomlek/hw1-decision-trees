@@ -163,7 +163,7 @@ def grade_assignment(request):
 
     report['score'] = int(np.ceil(100 * report['score'] / total))
     print(
-        f"Output of autograder\n"
+        f"\nOutput of autograder\n"
         f"======================\n"
         f"# of tests:\t{report['tests_passed']}/{total_tests} tests passed\n"
         f"Overall score:\t{report['score']}/{100}"
