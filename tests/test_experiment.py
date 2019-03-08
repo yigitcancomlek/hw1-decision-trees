@@ -1,10 +1,10 @@
-import numpy as np 
+import numpy as np
 from code import run
 import os
 
 datasets = [
-    os.path.join('data', x) 
-    for x in os.listdir('data') 
+    os.path.join('data', x)
+    for x in os.listdir('data')
     if '.csv' in x
 ]
 
@@ -16,8 +16,9 @@ def test_experiment_run_decision_tree():
             run(data_path, learner_type, .9)
         )
         accuracies[data_path] = accuracy
-    assert (accuracies['data/ivy-league.csv'] > .8)
-    
+    dataset = [dataset for dataset in datasets if 'ivy-league.csv' in dataset][0]
+    assert (accuracies[dataset] > .8)
+
 
 def test_experiment_run_prior_probability():
     accuracies = {}
@@ -27,7 +28,8 @@ def test_experiment_run_prior_probability():
             run(data_path, learner_type, .9)
         )
         accuracies[data_path] = accuracy
-    assert (accuracies['data/ivy-league.csv'] > .2)
+    dataset = [dataset for dataset in datasets if 'ivy-league.csv' in dataset][0]
+    assert (accuracies[dataset] > .2)
 
 def test_experiment_run_and_compare():
     for data_path in datasets:
