@@ -43,7 +43,7 @@ def log_test_result(request):
     test_result[request.node.name] = test_passed
     save_json(test_result, 'tests/test_result.json')
 
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope="session", autouse=True)
 def grade_assignment(request):
     """
     This is the autograder. It works by checking the results of each test case
