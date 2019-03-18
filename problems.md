@@ -34,38 +34,15 @@ you get 4 points here. Suggested order for passing test_cases:
 9. test_experiment_run_and_compare
 
 # Free-response questions (5 points)
-Answer the following questions
 
-# Report 
-Your task is to run the machine learning algorithms you have implemented on various
-datasets and synthesize the results into a coherent report. Someone reading your 
-report should be able to:
+1. To handle attributes that are real-valued (e.g. height, weight, age) with the ID3 algorithm, one must pick a split point for each attribute (e.g. height > 3). How would you pick a split point? Explain why you think that would be a good idea. Is there an example data distribution for which your approach would not work well?
 
-1. Understand the datasets you used - their structure, size, etc.
-2. Understand the approaches you used - how they work, how they are trained, etc.
-3. Understand the experiment you set up. What approaches were run on which datasets? What
-   was the training data? What was the testing data? Did you use n-fold cross 
-   validation?
-4. Know how your approaches performed on the datasets. You may report confusion 
-   matrices, f1-measure, precision and recall. You can also include graphs that you 
-   think are interesting. 
-5. Gain insight from your discussion of the results from the experiment. If am 
-   approach failed for a specific dataset, discuss why it failed. For example, was it
-   because of a bug in the implementation? Or something inherent to the approach that
-   makes it impossible for this task? If an approach succeeded on a dataset, discuss why 
-   it succeeded.
+2. There is a difference between what a decision tree can represent and what functions exist in the world that might need to be represented. What if you you want to use a decision tree built with ID3 to represent the concept weight > age. In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
 
-Your write-up should be clear and concise. Writing good reports are an important part 
-of machine learning. When writing machine learning papers, you'll have to do something
-like this. When making models in industry, you will have to communicate to your
-manager that your new model actually works before it gets deployed. This is done 
-through a clear, rigorous experimental report that is easily understood by others.
-Here is a suggested outline:
+3. Let <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> a voter in the set of voters <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/>. Let each <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> have a value drawn from <img src="/tex/e3d7babdf84d997af0eefde61fc68c05.svg?invert_in_darkmode&sanitize=true" align=middle width=23.744301899999993pt height=21.18721440000001pt/>. The majority-rule algorithm is defined as the rounded sum of all voters. If over half of the voters say 0, it returns 0, if over half return 1, it returns 1. Assume an odd number of voters. Can you represent this function in a decision tree? If so, how? if not, why not?
 
-1. Describe datasets used.
-2. Describe the approaches used.
-3. Explain your experiment clearly.
-4. Report your results.
-5. Discuss your results.
+4. How well did your decision tree learn the majority-rule function? How well did it learn XOR.  How well did it learn on the Ivy League problem? What about these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set?
 
-Submit your report via Canvas as a PDF document.
+5. In general, what kinds of functions does ID3 work well for and what kinds of functions does it work poorly for. 
+
+
