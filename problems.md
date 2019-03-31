@@ -35,14 +35,24 @@ you get 4 points here. Suggested order for passing test_cases:
 
 # Free-response questions (5 points)
 
-1. To handle attributes that are real-valued (e.g. height, weight, age) with the ID3 algorithm, one must pick a split point for each attribute (e.g. height > 3). How would you pick a split point? Explain why you think that would be a good idea. Is there an example data distribution for which your approach would not work well?
+1. There is a difference between what a decision tree can represent and what functions exist in the world that might need to be represented. Can a decision tree represent any arbitrary (finite length) boolean expresssion? Give a simple proof for your answer. 
 
-2. There is a difference between what a decision tree can represent and what functions exist in the world that might need to be represented. What if you you want to use a decision tree built with ID3 to represent the concept weight > age. In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
+2. Let <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/>  be a voter in the set of voters <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/>. Let each <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> have a value, assigned to either 0 or 1. Majority-rule is defined as the rounded sum of all voters. If over half of the voters say 0, it returns 0, if over half return 1, it returns 1. Assume an odd number of voters. Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
-3. Let <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> a voter in the set of voters <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/>. Let each <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> have a value drawn from <img src="/tex/e3d7babdf84d997af0eefde61fc68c05.svg?invert_in_darkmode&sanitize=true" align=middle width=23.744301899999993pt height=21.18721440000001pt/>. The majority-rule algorithm is defined as the rounded sum of all voters. If over half of the voters say 0, it returns 0, if over half return 1, it returns 1. Assume an odd number of voters. Can you represent this function in a decision tree? If so, how? if not, why not?
+3. How well did your decision tree built using ID3 learn the majority-rule function? Describe the tree depth and the accuracy. How did this learning compare to how well it did on the Ivy League problem? 
 
-4. How well did your decision tree learn the majority-rule function? How well did it learn XOR.  How well did it learn on the Ivy League problem? What about these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set?
+4. What about each of these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set?
 
-5. In general, what kinds of functions does ID3 work well for and what kinds of functions does it work poorly for. 
+5. Describe general features of an underlying decision problem (as opposed to the particular training set used to teach a decision tree) that will cause a decision tree like the ones you coded up to work well.
+
+6. One can modify the simple ID3 algorithm to handle attributes that are real-valued (e.g. height, weight, age). To do this, one must pick a split point for each attribute (e.g. height > 3) and then determine information gain, given the split point. How would you pick a split point automatically? 
+
+7. Describe an example data distribution for which your approach for creating split points would not work well. Describe a data distribution where it would work well. Give your reasoning.
+
+8. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimension plot, illustrate the decision line for the concept <img src="/tex/a293d914d054946fddd8fb36eadc4799.svg?invert_in_darkmode&sanitize=true" align=middle width=117.90945869999997pt height=22.831056599999986pt/>.
+
+9. Assume you have a decision tree that uses a single real-valued attribute (plus an ideally-chosen split point value) at each decision node. Can you represent the concept <img src="/tex/a293d914d054946fddd8fb36eadc4799.svg?invert_in_darkmode&sanitize=true" align=middle width=117.90945869999997pt height=22.831056599999986pt/> with such a tree?  In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
+
+10. In a 2-D plot, similar to that for question 8, plot the decision surface produced by the best decision tree you found in answering question 9.
 
 
