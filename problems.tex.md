@@ -49,7 +49,7 @@ you get 4 points here. Suggested order for passing test_cases:
 
 7. Describe an example data distribution for which your approach for creating split points would not work well. Describe a data distribution where it would work well. Give your reasoning.
 
-8. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimension plot, illustrate the decision line for the concept $height > weight$.
+8. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimensional plot, illustrate the decision line for the concept $height > weight$.
 
 9. Assume you have a decision tree that uses a single real-valued attribute (plus an ideally-chosen split point value) at each decision node. Can you represent the concept $height > weight$ with such a tree?  In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
 
