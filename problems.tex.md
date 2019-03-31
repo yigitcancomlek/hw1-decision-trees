@@ -37,7 +37,7 @@ you get 4 points here. Suggested order for passing test_cases:
 
 1. There is a difference between what a decision tree can represent and what functions exist in the world that might need to be represented. Can a decision tree represent any arbitrary (finite length) boolean expresssion? Give a simple proof for your answer. 
 
-2. Let $v$  be a voter in the set of voters $V$. Let each $v$ have a value, assigned to either 0 or 1. Majority-rule is defined as the rounded sum of all voters. If over half of the voters say 0, it returns 0, if over half return 1, it returns 1. Assume an odd number of voters. Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
+2. Let $v$  be a voter in the set of voters $V$. Let each $v$ have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If over half of the voters say -1, it returns -, if over half return 1, it returns +. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
 3. How well did your decision tree built using ID3 learn the majority-rule function? Describe the tree depth and the accuracy. How did this learning compare to how well it did on the Ivy League problem? 
 
