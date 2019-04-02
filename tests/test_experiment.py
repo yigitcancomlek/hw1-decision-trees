@@ -17,7 +17,7 @@ def test_experiment_run_decision_tree():
         )
         accuracies[data_path] = accuracy
     dataset = [dataset for dataset in datasets if 'ivy-league.csv' in dataset][0]
-    assert (accuracies[dataset] > .7)
+    assert (accuracies[dataset] == 1.0)
 
 
 def test_experiment_run_prior_probability():

@@ -36,7 +36,7 @@ Make a conda environment for this assignment, and then run:
 
 The test cases can be run with:
 
-``python -m pytest``
+``python -m pytest -s``
 
 at the root directory of the assignment repository.
 
