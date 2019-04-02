@@ -41,11 +41,11 @@ To answer some of these questions, you will have to write extra code (that is no
 
 2. Let $v$  be a voter in the set of voters $V$. Let each $v$ have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If over half of the voters say -1, it returns -, if over half return 1, it returns +. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
-3. How well did your decision tree built using ID3 learn the majority-rule function? Describe the tree depth and the accuracy. How did this learning compare to how well it did on the Ivy League problem? 
+3. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`). For each dataset, report the accuracy on the testing data, the number of nodes in the tree and the maximum depth (number of levels) of the tree.   
 
-4. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`). What about each of these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set? 
+4. What about each of these datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`) made the ID3 learning algorithm suitable or unsuitable for learning the function? 
 
-5. Describe general features of an underlying decision problem (as opposed to the particular training set used to teach a decision tree) that will cause a decision tree like the ones you coded up to work well.
+5. What is the the thing that `majority-rule.csv` and `xor.csv` have in common? How does this thing interacts with the underlying assumption in the way ID3 picks attributes to make decisions? 
 
 6. One can modify the simple ID3 algorithm to handle attributes that are real-valued (e.g. height, weight, age). To do this, one must pick a split point for each attribute (e.g. height > 3) and then determine information gain, given the split point. How would you pick a split point automatically? 
 
