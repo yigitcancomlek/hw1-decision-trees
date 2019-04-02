@@ -34,38 +34,27 @@ you get 4 points here. Suggested order for passing test_cases:
 9. test_experiment_run_and_compare
 
 # Free-response questions (5 points)
-Answer the following questions
 
-# Report 
-Your task is to run the machine learning algorithms you have implemented on various
-datasets and synthesize the results into a coherent report. Someone reading your 
-report should be able to:
+To answer some of these questions, you will have to write extra code (that is not covered by the test cases). The extra code should import your implementation and run experiments on the various datasets (e.g. choosing `ivy-league.csv` for a dataset and doing `experiment.run` with a 80/20 train/test split).
 
-1. Understand the datasets you used - their structure, size, etc.
-2. Understand the approaches you used - how they work, how they are trained, etc.
-3. Understand the experiment you set up. What approaches were run on which datasets? What
-   was the training data? What was the testing data? Did you use n-fold cross 
-   validation?
-4. Know how your approaches performed on the datasets. You may report confusion 
-   matrices, f1-measure, precision and recall. You can also include graphs that you 
-   think are interesting. 
-5. Gain insight from your discussion of the results from the experiment. If am 
-   approach failed for a specific dataset, discuss why it failed. For example, was it
-   because of a bug in the implementation? Or something inherent to the approach that
-   makes it impossible for this task? If an approach succeeded on a dataset, discuss why 
-   it succeeded.
+1. There is a difference between what a decision tree can represent and the learning algorithm used to generate a tree. Assume you have a deterministic function that takes a fixed, finite number of Boolean inputs and returns a Boolean output. Can a decision tree represent any such function? Give a simple proof for your answer. 
 
-Your write-up should be clear and concise. Writing good reports are an important part 
-of machine learning. When writing machine learning papers, you'll have to do something
-like this. When making models in industry, you will have to communicate to your
-manager that your new model actually works before it gets deployed. This is done 
-through a clear, rigorous experimental report that is easily understood by others.
-Here is a suggested outline:
+2. Let <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/>  be a voter in the set of voters <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/>. Let each <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If over half of the voters say -1, it returns -, if over half return 1, it returns +. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
-1. Describe datasets used.
-2. Describe the approaches used.
-3. Explain your experiment clearly.
-4. Report your results.
-5. Discuss your results.
+3. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`). For each dataset, report the accuracy on the testing data, the number of nodes in the tree and the maximum depth (number of levels) of the tree.   
 
-Submit your report via Canvas as a PDF document.
+4. What about each of these datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`) made the ID3 learning algorithm suitable or unsuitable for learning the function? 
+
+5. What is the the thing that `majority-rule.csv` and `xor.csv` have in common? How does this thing interacts with the underlying assumption in the way ID3 picks attributes to make decisions? 
+
+6. One can modify the simple ID3 algorithm to handle attributes that are real-valued (e.g. height, weight, age). To do this, one must pick a split point for each attribute (e.g. height > 3) and then determine information gain, given the split point. How would you pick a split point automatically? 
+
+7. Describe an example data distribution for which your approach for creating split points would not work well. Describe a data distribution where it would work well. Give your reasoning.
+
+8. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimensional plot, illustrate the decision line for the concept <img src="/tex/a293d914d054946fddd8fb36eadc4799.svg?invert_in_darkmode&sanitize=true" align=middle width=117.90945869999997pt height=22.831056599999986pt/>.
+
+9. Assume you have a decision tree that uses a single real-valued attribute (plus an ideally-chosen split point value) at each decision node. Can you represent the concept <img src="/tex/a293d914d054946fddd8fb36eadc4799.svg?invert_in_darkmode&sanitize=true" align=middle width=117.90945869999997pt height=22.831056599999986pt/> with such a tree?  In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
+
+10. In a 2-D plot, similar to that for question 8, plot the decision surface produced by the best decision tree you found in answering question 9.
+
+

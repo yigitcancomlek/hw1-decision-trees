@@ -1,7 +1,7 @@
 import numpy as np
 
 class Tree():
-    def __init__(self, value=None, attribute_name="root", attribute_index=None, branches=[]):
+    def __init__(self, value=None, attribute_name="root", attribute_index=None, branches=None):
         """
         This class implements a tree structure with multiple branches at each node. 
         If self.branches is an empty list, this is a leaf node and what is contained in
@@ -20,7 +20,7 @@ class Tree():
             value (number): Contains the value that data should be compared to along the
                 given attribute.
         """
-        self.branches = branches
+        self.branches = [] if branches is None else branches 
         self.attribute_name = attribute_name
         self.attribute_index = attribute_index
         self.value = value
