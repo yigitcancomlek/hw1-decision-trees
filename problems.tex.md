@@ -41,7 +41,7 @@ you get 4 points here. Suggested order for passing test_cases:
 
 3. How well did your decision tree built using ID3 learn the majority-rule function? Describe the tree depth and the accuracy. How did this learning compare to how well it did on the Ivy League problem? 
 
-4. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`. What about each of these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set?
+4. What about each of these data sets made the ID3 learning algorithm suitable or unsuitable for learning the function for each data set?
 
 5. Describe general features of an underlying decision problem (as opposed to the particular training set used to teach a decision tree) that will cause a decision tree like the ones you coded up to work well.
 
