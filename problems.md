@@ -35,7 +35,7 @@ you get 4 points here. Suggested order for passing test_cases:
 
 # Free-response questions (5 points)
 
-1. There is a difference between what a decision tree can represent and what functions exist in the world that might need to be represented. Can a decision tree represent any arbitrary (finite length) boolean expression? Give a simple proof for your answer. 
+1. There is a difference between what a decision tree can represent and the learning algorithm used to generate a tree. Assume you have a deterministic function that takes a fixed, finite number of Boolean inputs and returns a Boolean output. Can a decision tree represent any such function? Give a simple proof for your answer. 
 
 2. Let <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/>  be a voter in the set of voters <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/>. Let each <img src="/tex/6c4adbc36120d62b98deef2a20d5d303.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55786029999999pt height=14.15524440000002pt/> have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If over half of the voters say -1, it returns -, if over half return 1, it returns +. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
