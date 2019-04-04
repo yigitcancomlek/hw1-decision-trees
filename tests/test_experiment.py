@@ -8,6 +8,12 @@ datasets = [
     if '.csv' in x
 ]
 
+def xp_dataset_name(key):
+    dataset = [d for d in datasets if key in d]
+    if not dataset:
+        raise ValueError('Dataset ' + key + ' cannot be found')
+    return dataset[0]
+
 def test_experiment_run_decision_tree():
     accuracies = {}
     for data_path in datasets:
@@ -17,10 +23,10 @@ def test_experiment_run_decision_tree():
         )
         accuracies[data_path] = accuracy
     accuracy_goals = {
-        'data/ivy-league.csv': .95,
-        'data/xor.csv': 1.0,
-        'data/candy-data.csv': .75,
-        'data/majority-rule.csv': 1.0
+        xp_dataset_name('ivy-league.csv'): .95,
+        xp_dataset_name('xor.csv'): 1.0,
+        xp_dataset_name('candy-data.csv'): .75,
+        xp_dataset_name('majority-rule.csv'): 1.0
     }
     for key in accuracy_goals:
         assert (accuracies[key] >= accuracy_goals[key])
@@ -33,7 +39,7 @@ def test_experiment_run_prior_probability():
             run(data_path, learner_type, 1.0)
         )
         accuracies[data_path] = accuracy
-    dataset = [dataset for dataset in datasets if 'ivy-league.csv' in dataset][0]
+    dataset = xp_dataset_name('ivy-league.csv')
     assert (accuracies[dataset] > .2)
 
 def test_experiment_run_and_compare():
