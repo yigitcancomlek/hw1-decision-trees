@@ -17,7 +17,7 @@ def test_experiment_run_decision_tree():
         )
         accuracies[data_path] = accuracy
     accuracy_goals = {
-        'data/vy-league.csv': .95,
+        'data/ivy-league.csv': .95,
         'data/xor.csv': 1.0,
         'data/candy-data.csv': .75,
         'data/majority-rule.csv': 1.0
