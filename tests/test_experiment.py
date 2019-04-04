@@ -16,9 +16,14 @@ def test_experiment_run_decision_tree():
             run(data_path, learner_type, 1.0)
         )
         accuracies[data_path] = accuracy
-    dataset = [dataset for dataset in datasets if 'ivy-league.csv' in dataset][0]
-    assert (accuracies[dataset] == 1.0)
-
+    accuracy_goals = {
+        'ivy-league.csv': .95,
+        'xor.csv': 1.0,
+        'candy-data.csv': .75,
+        'majority-rule.csv': 1.0
+    }
+    for key in accuracy_goals:
+        assert (accuracies[dataset] >= accuracy_goals[key])
 
 def test_experiment_run_prior_probability():
     accuracies = {}
