@@ -35,26 +35,31 @@ you get 4 points here. Suggested order for passing test_cases:
 
 # Free-response questions (5 points)
 
+To answer some of these questions you will have to read the assigned reading (Chapter 3 of Machine learning) for decision trees. 
+
 To answer some of these questions, you will have to write extra code (that is not covered by the test cases). The extra code should import your implementation and run experiments on the various datasets (e.g. choosing `ivy-league.csv` for a dataset and doing `experiment.run` with a 80/20 train/test split).
 
-1. There is a difference between what a decision tree can represent and the learning algorithm used to generate a tree. Assume you have a deterministic function that takes a fixed, finite number of Boolean inputs and returns a Boolean output. Can a decision tree represent any such function? Give a simple proof for your answer. 
+1. Assume you have a deterministic function that takes a fixed, finite number of Boolean inputs and returns a Boolean output. Can a decision tree be built to represent any such function? Give a simple proof for your answer. 
 
-2. Let $v$  be a voter in the set of voters $V$. Let each $v$ have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If over half of the voters say -1, it returns -, if over half return 1, it returns +. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
+2. Let $v$  be a voter in the set of voters $V$. Let each $v$ have a value, assigned to either -1 or 1. Let's define Majority-rule as the sign of the sum all voters. If the sum is negative, it returns -, else it returns 1. Assume an odd number of voters (so there are no ties). Can the majority-rule algorithm be represented by a decision tree that considers a single voter at each decision node? Why or why not?
 
-3. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`). For each dataset, report the accuracy on the testing data, the number of nodes in the tree and the maximum depth (number of levels) of the tree.   
+3. In the coding section of this assignment, you trained a decision tree with the ID3 algorithm on several datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`). For each dataset, report the accuracy on the testing data, the number of nodes in the tree and the maximum depth (number of levels) of the tree. 
 
-4. What about each of these datasets (`candy-data.csv`, `majority-rule.csv`, `ivy-league.csv`, and `xor.csv`) made the ID3 learning algorithm suitable or unsuitable for learning the function? 
+4. What is the bias of the ID3 algorithm in the way it searches the hypothesis space of possible decision trees?
 
-5. What is the the thing that `majority-rule.csv` and `xor.csv` have in common? How does this thing interacts with the underlying assumption in the way ID3 picks attributes to make decisions? 
+5. What is the the thing that `majority-rule.csv` and `xor.csv` have in common? How does this thing interact with the bias in the way ID3 builds a decision tree? 
 
-6. One can modify the simple ID3 algorithm to handle attributes that are real-valued (e.g. height, weight, age). To do this, one must pick a split point for each attribute (e.g. height > 3) and then determine information gain, given the split point. How would you pick a split point automatically? 
+6. Explain what overfitting is and describe how one can tell it is happening.
 
-7. Describe an example data distribution for which your approach for creating split points would not work well. Describe a data distribution where it would work well. Give your reasoning.
+7. Explain how Reduced Error Pruning is done, the reason for doing it, and what the tradeoffs are in applying Reduced Error Pruning.
 
-8. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimensional plot, illustrate the decision line for the concept $height > weight$.
+8. One can modify the simple ID3 algorithm to handle attributes that are real-valued (e.g. height, weight, age). To do this, one must pick a split point for each attribute (e.g. height > 3) and then determine information gain, given the split point. How would you pick a split point automatically? Why would you do it that way?  
 
-9. Assume you have a decision tree that uses a single real-valued attribute (plus an ideally-chosen split point value) at each decision node. Can you represent the concept $height > weight$ with such a tree?  In other words, you want to return "true" if someone's weight is greater than their age and "false" otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
+9. Assume each person in a population is has two real-valued measured attributes: height, weight. In a two-dimensional plot, illustrate the decision boundary line for the concept $height > weight$. Those with $height > weight$  get a 0, those with $height \leq weight$ get a 1.  Now, sssume you have a decision tree that uses a single real-valued attribute (plus an ideally-chosen split point value) at each decision node. Can you represent the concept $height > weight$ with such a tree?  In other words, you want to always return 0 if someone's weight is greater than their age and 1 otherwise.  Can you do it? If so, specify the decision tree. If not, say why not.
 
-10. In a 2-D plot, similar to that for question 8, plot the decision surface produced by the best decision tree you found in answering question 9.
+10. Ensemble methods are learning methods that combine the output of multiple learners. The hope is that an ensemble will do better than any one learner, because it reduces the overfitting a single learner may be suceptible to. One of the most popular ensemble methods is the random forest. The high level idea is to build multiple decision trees from the training data. The way one builds different decision trees from the same data is to train decision trees on different random subsets of the attributes. If, for example, there are 20 measurable attributes, you randomly pick 10 of the attributes and build a tree on those 10, then you randomly pick another 10 attributes and build a tree using those 10 attributes. If you were building an ensemble of $n$ trees this way, how would you combine their decisions in the end? Explain why you would choose this method. Feel free to provide a citation for your choice (if you cite something, please ALSO provide a hyperlink), but also explain the reason this is your choice.
+
+
+
 
 
