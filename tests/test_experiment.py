@@ -17,10 +17,10 @@ def test_experiment_run_decision_tree():
         )
         accuracies[data_path] = accuracy
     accuracy_goals = {
-        'ivy-league.csv': .95,
-        'xor.csv': 1.0,
-        'candy-data.csv': .75,
-        'majority-rule.csv': 1.0
+        'data/vy-league.csv': .95,
+        'data/xor.csv': 1.0,
+        'data/candy-data.csv': .75,
+        'data/majority-rule.csv': 1.0
     }
     for key in accuracy_goals:
         assert (accuracies[key] >= accuracy_goals[key])
