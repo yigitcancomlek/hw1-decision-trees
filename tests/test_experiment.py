@@ -23,7 +23,7 @@ def test_experiment_run_decision_tree():
         'majority-rule.csv': 1.0
     }
     for key in accuracy_goals:
-        assert (accuracies[dataset] >= accuracy_goals[key])
+        assert (accuracies[key] >= accuracy_goals[key])
 
 def test_experiment_run_prior_probability():
     accuracies = {}
