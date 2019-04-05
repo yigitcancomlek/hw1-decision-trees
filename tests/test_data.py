@@ -12,7 +12,7 @@ def test_load_data():
 
     _features, _targets, _attribute_names = load_data('tests/test.csv')
     assert attribute_names == _attribute_names
-    assert features == _features and targets == _targets
+    assert np.allclose(features, _features) and np.allclose(targets, _targets)
 
 def test_train_test_split():
     from code import train_test_split
