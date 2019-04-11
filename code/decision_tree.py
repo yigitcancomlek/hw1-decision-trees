@@ -54,7 +54,6 @@ class DecisionTree():
         """
         self.attribute_names = attribute_names
         self.tree = None
-        return
 
     def _check_input(self, features):
         if features.shape[1] != len(self.attribute_names):
