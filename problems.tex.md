@@ -37,7 +37,7 @@ you get 4 points here. Suggested order for passing test_cases:
 
 To answer some of these questions you will have to read the assigned reading (Chapter 3 of Machine learning) for decision trees. 
 
-To answer some of these questions, you will have to write extra code (that is not covered by the test cases). The extra code should import your implementation and run experiments on the various datasets (e.g. choosing `ivy-league.csv` for a dataset and doing `experiment.run` with a 80/20 train/test split).
+To answer some of these questions, you will have to write extra code (that is not covered by the test cases). The extra code should import your implementation and run experiments on the various datasets (e.g. choosing `ivy-league.csv` for a dataset and doing `experiment.run` with a 80/20 train/test split, averaged over a few different splits).
 
 1. Assume you have a deterministic function that takes a fixed, finite number of Boolean inputs and returns a Boolean output. Can a decision tree be built to represent any such function? Give a simple proof for your answer. 
 
